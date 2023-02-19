@@ -9,6 +9,7 @@ const storageService = async (file: File) => {
   const cid = await storage.put(input);
   console.log(`IPFS CID: ${cid}`);
   console.log(`Gateway URL: https://dweb.link/ipfs/${cid}`);
+  return cid;
 };
 
 export default storageService;
